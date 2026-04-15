@@ -33,8 +33,8 @@ Die Elemente können innerhalb des Containers flexibel angeordnet werden und erm
 - Dient als Parent für alle Editorial Items
 
 **Editorial Item (Einzelblock)**
-- Nur innerhalb des Containers verfügbar (Parent-Block) :contentReference[oaicite:0]{index=0}  
-- Rendert Inhalt basierend auf Position (z. B. links / rechts) :contentReference[oaicite:1]{index=1}  
+- Nur innerhalb des Containers verfügbar (Parent-Block)
+- Rendert Inhalt basierend auf Position (z. B. links / rechts)
 
 ---
 
@@ -58,12 +58,12 @@ Die Darstellung erfolgt als flexibles Layout mit individuell positionierten Inha
 
 ## Technische Hinweise
 
-- Block-Registrierung erfolgt dynamisch über `block.json` im `src/blocks`-Verzeichnis :contentReference[oaicite:2]{index=2}  
+- Block-Registrierung erfolgt dynamisch über `block.json` im `src/blocks`-Verzeichnis
 - Zwei Blöcke:
-  - `ud/editorial-layout` (Container) :contentReference[oaicite:3]{index=3}  
-  - `ud/editorial-item` (Einzelelement, nur innerhalb des Containers) :contentReference[oaicite:4]{index=4}  
-- Items besitzen ein Positions-Attribut zur Layoutsteuerung :contentReference[oaicite:5]{index=5}  
-- Zentrale Logik über `helpers.php`, `render.php`, `enqueue.php` :contentReference[oaicite:6]{index=6}  
+  - `ud/editorial-layout` (Container)
+  - `ud/editorial-item` (Einzelelement, nur innerhalb des Containers)
+- Items besitzen ein Positions-Attribut zur Layoutsteuerung
+- Zentrale Logik über `helpers.php`, `render.php`, `enqueue.php`
 
 ---
 
@@ -73,5 +73,5 @@ Die Darstellung erfolgt als flexibles Layout mit individuell positionierten Inha
 
 ## Lizenz
 
-GPL v2 or later  
+GPL v2 or later
 https://www.gnu.org/licenses/gpl-2.0.html
