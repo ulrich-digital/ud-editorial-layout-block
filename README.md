@@ -40,7 +40,7 @@ Die Elemente können innerhalb des Containers flexibel angeordnet werden und erm
 
 ## Editor
 
-![Screenshot des Layout-Blocks im Editor mit eingefügten Editorial Items. Inhalte können direkt innerhalb der Items gestaltet werden.](assets/editor-editorial-layout.png)
+![Screenshot des Layout-Blocks im Editor mit eingefügten Editorial Items. Inhalte können direkt innerhalb der Items gestaltet werden.](assets/ud-editorial-layout-block-editor.png)
 
 - Layout wird über den Container definiert
 - Inhalte werden direkt in den Editorial Items erstellt (z. B. Text, Bilder, Blöcke)
