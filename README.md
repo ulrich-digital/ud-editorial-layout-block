@@ -50,7 +50,7 @@ Die Elemente können innerhalb des Containers flexibel angeordnet werden und erm
 
 ## Frontend
 
-![Beispielhafte Darstellung eines editorialen Layouts mit frei angeordneten Inhaltselementen.](assets/frontend-editorial-layout.png)
+![Beispielhafte Darstellung eines editorialen Layouts mit frei angeordneten Inhaltselementen.](assets/ud-editorial-layout-block-frontend.png)
 
 Die Darstellung erfolgt als flexibles Layout mit individuell positionierten Inhaltselementen. Struktur und Design werden über Styles im Theme gesteuert.
 
