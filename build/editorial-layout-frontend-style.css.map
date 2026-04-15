@@ -1,0 +1,1 @@
+{"version":3,"file":"editorial-layout-frontend-style.css","mappings":";;;AAAA;EACC;EACA;EACA;EACG;AACJ,C","sources":["webpack://ud-editorial-layout-block/./src/css/editorial-layout/frontend.scss"],"sourcesContent":[".wp-block-ud-editorial-layout {\n\tbox-sizing: border-box;\n\twidth: 900px;\n\tmax-width: 100%;\n    margin: 2rem auto;\n}\n"],"names":[],"sourceRoot":""}

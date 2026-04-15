@@ -1,0 +1,17 @@
+{
+  "apiVersion": 3,
+  "name": "ud/editorial-layout",
+  "title": "UD Block: Editorial Layout",
+  "category": "design",
+  "icon": "screenoptions",
+  "description": "Ein individueller UD-Block.",
+  "supports": {
+    "html": false,
+    "anchor": true
+  },
+  "textdomain": "editorial-layout-block-ud",
+  "editorScript": "file:../../../build/editorial-layout-editor-script.js",
+  "editorStyle": "file:../../../build/editorial-layout-editor-style.css",
+  "script": "file:../../../build/editorial-layout-frontend-script.js",
+  "style": "file:../../../build/editorial-layout-frontend-style.css"
+}

@@ -1,0 +1,75 @@
+@use "../utils/tokens";
+/* =============================================================== *\
+   Design Tokens
+
+   Farbskalen:
+   --ud-{category}-{scale} (100–900)
+   positive | warning | error | info | neutral
+
+   Beispiel: var(--ud-positive-500)
+
+   Semantische Tokens:
+   --ud-color-{success | warning | error | info | text | text-muted | bg | surface | border}
+\* =============================================================== */
+
+.wp-block-ud-editorial-item {
+	position: relative;
+	box-sizing: border-box;
+	align-self: flex-start;
+	padding: 16px;
+	width: 40%;
+	border: 1px solid #d6d6d6;
+	border-radius: 20px;
+	background: #fff;
+	margin-top: unset;
+
+	&.is-position-left {
+		align-self: flex-start;
+	}
+
+	&.is-position-center {
+		align-self: center;
+	}
+
+	&.is-position-right {
+		align-self: flex-end;
+	}
+
+	.ud-editorial-item__meta {
+		margin: 0 0 12px;
+	}
+
+	.ud-editorial-item__position {
+		display: inline-flex;
+		padding: 4px 10px;
+		border-radius: 999px;
+		background: #ececec;
+		font-size: 11px;
+		font-weight: 500;
+		line-height: 1.2;
+		opacity: 0.7;
+	}
+
+	.ud-editorial-item__inner {
+		min-height: 80px;
+	}
+
+	.block-editor-default-block-appender {
+		position: static;
+		margin: 12px 0 0;
+	}
+}
+
+.block-editor-block-list__layout
+	.block-editor-block-list__block.wp-block-ud-editorial-item {
+	border-radius: 20px;
+
+	&::after {
+		border-radius: 20px;
+	}
+
+	&.is-selected,
+	&:focus {
+		border-color: transparent;
+	}
+}

@@ -1,0 +1,26 @@
+{
+  "apiVersion": 3,
+  "name": "ud/editorial-item",
+  "title": "UD Block: Editorial Item",
+  "category": "design",
+  "icon": "align-pull-left",
+  "description": "Ein frei positionierbares Inhaltselement innerhalb des Editorial-Layouts.",
+  "parent": [
+    "ud/editorial-layout"
+  ],
+  "supports": {
+    "html": false,
+    "reusable": false
+  },
+  "attributes": {
+    "position": {
+      "type": "string",
+      "default": "left"
+    }
+  },
+  "textdomain": "editorial-layout-ud",
+  "editorScript": "file:../../../build/editorial-item-editor-script.js",
+  "editorStyle": "file:../../../build/editorial-item-editor-style.css",
+  "script": "file:../../../build/editorial-item-frontend-script.js",
+  "style": "file:../../../build/editorial-item-frontend-style.css"
+}

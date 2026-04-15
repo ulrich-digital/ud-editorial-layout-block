@@ -1,0 +1,17 @@
+.wp-block-ud-editorial-item {
+	box-sizing: border-box;
+max-width: 450px;
+margin-top: 100px;
+
+	&.is-position-left {
+		justify-self: start;
+	}
+
+	&.is-position-center {
+		justify-self: center;
+	}
+
+	&.is-position-right {
+		justify-self: end;
+	}
+}
