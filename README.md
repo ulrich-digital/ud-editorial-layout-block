@@ -1,71 +1,110 @@
-# UD Block: Editorial Layout Block
+# UD Block: Editoriales Layout
 
-Layout-Block zur freien Anordnung von Inhaltselementen in einem editorialen Raster.
+WordPress-Block-Plugin für versetzt angeordnete Inhalte in editorialen Seitenlayouts.
 
----
+Das Plugin verbindet eine klare Blockstruktur mit einer einfachen Positionswahl. Redaktionelle Elemente werden links, mittig oder rechts angeordnet und schaffen so einen abwechslungsreichen visuellen Lesefluss.
 
-## Übersicht
+## Zweck
 
-Dieses Plugin stellt zwei Blöcke zur Verfügung:
+Editoriale Seiten leben von Rhythmus, Gewichtung und bewusst gesetzten Freiräumen. Dieses Plugin stellt dafür zwei aufeinander abgestimmte Gutenberg-Blöcke bereit:
 
-- **Editorial Layout (Container)**: Definiert den Layout-Bereich
-- **Editorial Item (Einzelelement)**: Frei positionierbares Inhaltselement innerhalb des Layouts
+- **Editoriales Layout** bildet den gemeinsamen Container.
+- **Editoriales Element** bündelt die Inhalte und erhält seine Position innerhalb des Layouts.
 
-Die Elemente können innerhalb des Containers flexibel angeordnet werden und ermöglichen gestalterisch freie Inhaltslayouts.
+Die Redaktion arbeitet mit vertrauten WordPress-Blöcken und steuert die Anordnung über drei verständliche Positionen.
 
----
+## Blöcke
 
-## Funktionen
+### Editoriales Layout
 
-- Container-Block für freie Layout-Strukturen
-- Editorial Items als flexibel platzierbare Inhaltselemente
-- Positionierung der Items (z. B. links / rechts)
-- Kombination mehrerer Items innerhalb eines Layouts
-- Ideal für Magazin- oder Storytelling-Layouts
-- Anchor-Unterstützung für den Container-Block
+Übergeordneter Container für beliebig viele editoriale Elemente.
 
----
+- nimmt gezielt Blöcke vom Typ `ud/editorial-item` auf
+- hält Reihenfolge und Layoutbezug der Elemente zusammen
+- unterstützt einen individuellen HTML-Anker
+- stellt den Rahmen für die gemeinsame Frontend-Darstellung bereit
 
-## Rendering-Kontext
+### Editoriales Element
 
-**Editorial Layout (Container)**
-- Definiert den Layout-Rahmen
-- Dient als Parent für alle Editorial Items
+Inhaltselement innerhalb des Editorialen Layouts.
 
-**Editorial Item (Einzelblock)**
-- Nur innerhalb des Containers verfügbar (Parent-Block)
-- Rendert Inhalt basierend auf Position (z. B. links / rechts)
+- steht innerhalb von `ud/editorial-layout` zur Verfügung
+- lässt sich links, mittig oder rechts anordnen
+- speichert die gewählte Position als Block-Attribut
+- unterstützt Absätze, Überschriften, Listen, Bilder und Buttons
+- zeigt die gewählte Position direkt im Editor
 
----
+## Bedienung im Editor
 
-## Editor
+Ist ein Editoriales Element ausgewählt, kann seine Position über die Block-Werkzeugleiste oder im Inspector unter **Position → Position im Layout** geändert werden. Die Auswahl wird unmittelbar in der Editor-Vorschau sichtbar.
 
-![Screenshot des Layout-Blocks im Editor mit eingefügten Editorial Items. Inhalte können direkt innerhalb der Items gestaltet werden.](assets/ud-editorial-layout-block-editor.png)
+![Editoriales Element im Gutenberg-Editor mit drei versetzt angeordneten Inhaltsbereichen und Einstellung für die Position im Layout.](assets/ud-editorial-layout-block-editor.webp)
 
-- Layout wird über den Container definiert
-- Inhalte werden direkt in den Editorial Items erstellt (z. B. Text, Bilder, Blöcke)
-- Position der Items steuerbar
+*Die Redaktion positioniert jedes Element links, mittig oder rechts und gestaltet seinen Inhalt mit ausgewählten WordPress-Blöcken.*
 
----
+## Darstellung im Frontend
 
-## Frontend
+Im Frontend bilden die nacheinander gesetzten Positionen einen zusammenhängenden Lesefluss. Die Blockstruktur liefert Position und Reihenfolge; das Projekt-Theme kann Farben, Typografie, Abstände und weitere gestalterische Merkmale definieren.
 
-![Beispielhafte Darstellung eines editorialen Layouts mit frei angeordneten Inhaltselementen.](assets/ud-editorial-layout-block-frontend.png)
+![WordPress-Frontend mit drei versetzt angeordneten Inhaltsbereichen, die einen editorialen Lesefluss bilden.](assets/ud-editorial-layout-block-frontend.webp)
 
-Die Darstellung erfolgt als flexibles Layout mit individuell positionierten Inhaltselementen. Struktur und Design werden über Styles im Theme gesteuert.
+*Die wechselnde Anordnung führt den Blick durch die Inhalte und überträgt die im Editor gewählte Position in das Frontend.*
 
----
+## Technische Grundlage
 
-## Technische Hinweise
+Das Plugin verwendet:
 
-- Block-Registrierung erfolgt dynamisch über `block.json` im `src/blocks`-Verzeichnis
-- Zwei Blöcke:
-  - `ud/editorial-layout` (Container)
-  - `ud/editorial-item` (Einzelelement, nur innerhalb des Containers)
-- Items besitzen ein Positions-Attribut zur Layoutsteuerung
-- Zentrale Logik über `helpers.php`, `render.php`, `enqueue.php`
+- WordPress Block Editor
+- React / JSX
+- `InnerBlocks` mit gezielt zugelassenen Blocktypen
+- Block API Version 3
+- `block.json` für die Block-Registrierung
+- SCSS für Editor- und Frontend-Styles
+- Webpack und `@wordpress/scripts` für den Build
 
----
+Die beiden Blöcke speichern ihre Ausgabe statisch. Das Positions-Attribut des Editorialen Elements wird als Klasse `is-position-left`, `is-position-center` oder `is-position-right` ausgegeben.
+
+## Struktur
+
+```text
+ud-editorial-layout-block/
+├── assets/
+├── build/
+├── includes/
+│   ├── block-register.php
+│   ├── enqueue.php
+│   ├── helpers.php
+│   └── render.php
+├── src/
+│   ├── blocks/
+│   │   ├── editorial-item/
+│   │   └── editorial-layout/
+│   └── css/
+├── package.json
+├── package-lock.json
+├── webpack.config.js
+└── ud-editorial-layout-block.php
+```
+
+## Entwicklung
+
+Abhängigkeiten installieren:
+
+```bash
+npm install
+```
+
+Entwicklungsmodus starten:
+
+```bash
+npm run start
+```
+
+Produktions-Build erstellen:
+
+```bash
+npm run build
+```
 
 ## Autor
 
@@ -74,4 +113,4 @@ Die Darstellung erfolgt als flexibles Layout mit individuell positionierten Inha
 ## Lizenz
 
 GPL v2 or later
-https://www.gnu.org/licenses/gpl-2.0.html
+[https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)

@@ -1,17 +1,14 @@
-import {
-	InnerBlocks,
-	useBlockProps,
-} from '@wordpress/block-editor';
+import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
-export default function save({ attributes }) {
+export default function save( { attributes } ) {
 	const { position } = attributes;
 
-	const blockProps = useBlockProps.save({
-		className: `is-position-${position}`,
-	});
+	const blockProps = useBlockProps.save( {
+		className: `is-position-${ position }`,
+	} );
 
 	return (
-		<div {...blockProps}>
+		<div { ...blockProps }>
 			<InnerBlocks.Content />
 		</div>
 	);

@@ -1,10 +1,10 @@
 {
   "apiVersion": 3,
   "name": "ud/editorial-item",
-  "title": "UD Block: Editorial Item",
+  "title": "Editoriales Element",
   "category": "design",
   "icon": "align-pull-left",
-  "description": "Ein frei positionierbares Inhaltselement innerhalb des Editorial-Layouts.",
+  "description": "Bündelt redaktionelle Inhalte und lässt sich im Layout links, mittig oder rechts anordnen.",
   "parent": ["ud/editorial-layout"],
   "supports": {
     "html": false,

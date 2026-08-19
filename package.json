@@ -9,6 +9,7 @@
     "lint:css": "wp-scripts lint-style"
   },
   "devDependencies": {
+    "@wordpress/icons": "^15.4.0",
     "@wordpress/scripts": "^30.0.0"
   }
 }

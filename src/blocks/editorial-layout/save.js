@@ -1,12 +1,12 @@
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
 export default function save() {
-	const blockProps = useBlockProps.save({
+	const blockProps = useBlockProps.save( {
 		className: 'ud-editorial-layout',
-	});
+	} );
 
 	return (
-		<div {...blockProps}>
+		<div { ...blockProps }>
 			<InnerBlocks.Content />
 		</div>
 	);

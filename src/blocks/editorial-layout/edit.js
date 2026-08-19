@@ -1,18 +1,18 @@
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
-const ALLOWED_BLOCKS = ['ud/editorial-item'];
+const ALLOWED_BLOCKS = [ 'ud/editorial-item' ];
 
 export default function Edit() {
-	const blockProps = useBlockProps({
+	const blockProps = useBlockProps( {
 		className: 'ud-editorial-layout',
-	});
+	} );
 
 	return (
-		<div {...blockProps}>
+		<div { ...blockProps }>
 			<InnerBlocks
-				allowedBlocks={ALLOWED_BLOCKS}
+				allowedBlocks={ ALLOWED_BLOCKS }
 				orientation="vertical"
-				renderAppender={InnerBlocks.ButtonBlockAppender}
+				renderAppender={ InnerBlocks.ButtonBlockAppender }
 			/>
 		</div>
 	);
