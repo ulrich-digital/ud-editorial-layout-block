@@ -106,6 +106,10 @@ Produktions-Build erstellen:
 npm run build
 ```
 
+## Weiterführender Beitrag
+
+Wie aus frei kombinierbaren Gutenberg-Blöcken ein rhythmisches Inhaltslayout entsteht, zeigt der Beitrag [Editoriale Inhaltslayouts im Gutenberg-Editor flexibel gestalten](https://ulrich.digital/editoriale-inhaltslayouts-im-gutenberg-editor-flexibel-gestalten/).
+
 ## Autor
 
 [ulrich.digital gmbh](https://ulrich.digital)
